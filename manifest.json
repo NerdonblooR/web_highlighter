@@ -1,0 +1,19 @@
+{
+    "name":"Web Highlighter",
+    "version":"0.0.0",
+    "manifest_version":2,
+    "description":"Hightlight the webpage, Share your hightlight with others",
+    "icons":{ "128": "image/icon.png" },
+    "browser_action":{
+       "default_icon" : "image/icon.png" 
+    },
+    "content_scripts":[{
+        "matches": [ "http://*/*", "https://*/*" ], 
+        "js":["highlighter.js"], 
+        "css":["highlighter.css"], 
+        "run_at":"document_start" 
+    }],
+    "permissions":[
+        "tabs"    
+    ]
+}
